@@ -95,11 +95,11 @@ h1, h2 {
     color: var(--primary-black);
     margin-bottom: 2rem;
     text-align: center;
-    font-size: 2rem; /* Tamaño base para pantallas grandes */
+    font-size: 2rem; 
 }
 
 @media (max-width: 768px) {
-    /* Ajustes para el menú de navegación */
+    
     nav {
         flex-direction: column;
         padding: 1rem 0;
@@ -108,46 +108,43 @@ h1, h2 {
     .nav-links {
         flex-wrap: wrap;
         gap: 1rem;
-        justify-content: center; /* Centrar los enlaces en móviles */
+        justify-content: center; 
     }
 
-    /* Ajustes para las secciones */
+    
     .seccion {
-        padding: 2rem 1rem; /* Reducir el padding en móviles */
+        padding: 2rem 1rem; 
     }
 
-    /* Ajustes para los productos en la tienda */
     .productos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Ajustes para el modal */
     .modal-content {
         margin: 10px auto;
         width: 95%;
         padding: 1rem;
     }
 
-    /* Ajustes para los elementos del carrito */
     .carrito-item {
-        flex-direction: column; /* Cambiar a columna en móviles */
+        flex-direction: column; 
         text-align: center;
         gap: 0.5rem;
     }
 
     .carrito-item button {
-        width: 100%; /* Botones ocupan todo el ancho */
+        width: 100%; 
     }
 }
 
-/* Asegúrate de que el tamaño de las imágenes sea responsivo */
+
 img {
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-    height: auto;    /* Mantiene la proporción de la imagen */
+    max-width: 100%; 
+    height: auto;    
 }
 
 .producto img {
-    width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
+    width: 100%; 
     height: auto;
 }
 
@@ -220,7 +217,7 @@ input, textarea, button {
     border-radius: 4px;
 }
 
-/* Estilos para el botón de completar compra */
+
 button {
     background-color: var(--primary-black);
     color: var(--primary-white);
@@ -316,18 +313,16 @@ footer p {
     }
 }
 
-/* Ajustes para la imagen en la sección de contacto */
 #contacto img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-top: 1rem; /* Añade un margen superior para separar la imagen del formulario */
+    width: 100%; 
+    height: auto; 
+    margin-top: 1rem; 
 }
 
-/* Ajustes para el formulario en la sección de contacto */
 #contacto {
     display: flex;
-    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .whatsapp-btn {

@@ -1,4 +1,4 @@
-// Función para formatear precios
+
 function formatearPrecio(precio) {
     return new Intl.NumberFormat('es-AR', {
         style: 'decimal',
@@ -7,7 +7,7 @@ function formatearPrecio(precio) {
     }).format(precio);
 }
 
-// Productos de ejemplo
+
 const productos = [
     {
         id: 1,
@@ -53,10 +53,10 @@ const productos = [
     }
 ];
 
-// Carrito de compras
+
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-// Función para mostrar/ocultar secciones
+
 function mostrarSeccion(seccionId) {
     document.querySelectorAll('.seccion').forEach(seccion => {
         seccion.style.display = 'none';
@@ -76,7 +76,6 @@ function mostrarSeccion(seccionId) {
     }
 }
 
-// Cargar productos en la tienda
 function cargarProductos() {
     const contenedor = document.querySelector('.productos-grid');
     if (!contenedor) return;
@@ -96,7 +95,6 @@ function cargarProductos() {
     });
 }
 
-// Funciones del carrito
 function agregarAlCarrito(id) {
     const producto = productos.find(p => p.id === id);
     carrito.push(producto);
@@ -134,7 +132,6 @@ function guardarCarrito() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-// Event Listeners para navegación
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -144,7 +141,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Modal handlers
 const carritoModal = document.getElementById('carrito-modal');
 const checkoutModal = document.getElementById('checkout-modal');
 
@@ -177,13 +173,11 @@ document.querySelectorAll('.close').forEach(btn => {
     }
 });
 
-// Manejar la navegación con el botón atrás/adelante del navegador
 window.addEventListener('popstate', () => {
     const seccionId = window.location.hash.slice(1) || 'inicio';
     mostrarSeccion(seccionId);
 });
 
-// Inicializar
 window.addEventListener('load', () => {
     const seccionId = window.location.hash.slice(1) || 'inicio';
     mostrarSeccion(seccionId);
